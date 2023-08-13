@@ -1,7 +1,7 @@
 <template>
   <transition leave-active-class="animate__fadeOutUp" :duration="300">
     <div class="jw-alert animate__animated" :class="classes" v-if="visible">
-      <jw-icon
+      <xh-icon
         class="jw-alert-close-icon"
         :size="18"
         color="#7a7a7a"
@@ -9,41 +9,41 @@
         @click="close"
       >
         <Close />
-      </jw-icon>
+      </xh-icon>
       <slot name="icon">
         <template v-if="showIcon">
-          <jw-icon
+          <xh-icon
             class="jw-alert-icon"
             :size="22"
             v-if="type === 'info'"
             color="#3f7ee8"
           >
             <Info24Filled />
-          </jw-icon>
-          <jw-icon
+          </xh-icon>
+          <xh-icon
             class="jw-alert-icon"
             :size="22"
             v-if="type === 'success'"
             color="#4b9e5f"
           >
             <IosCheckmarkCircle />
-          </jw-icon>
-          <jw-icon
+          </xh-icon>
+          <xh-icon
             class="jw-alert-icon"
             :size="22"
             v-if="type === 'warning'"
             color="#e4a341"
           >
             <WarningFilled />
-          </jw-icon>
-          <jw-icon
+          </xh-icon>
+          <xh-icon
             class="jw-alert-icon"
             :size="22"
             v-if="type === 'error'"
             color="#bf3f53"
           >
             <CloseCircle />
-          </jw-icon>
+          </xh-icon>
         </template>
       </slot>
 

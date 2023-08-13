@@ -1,14 +1,14 @@
 <preview>动态编辑标签</preview>
 <template>
-  <jw-tag
+  <xh-tag
     v-for="tag in dynamicTags"
     :key="tag"
     closeable
-    type="success"
+    type="primary"
     @close="handleClose(tag)"
   >
     {{ tag }}
-  </jw-tag>
+  </xh-tag>
   <jw-input
     v-if="inputVisible"
     :ref="(e) => (InputRef = e)"
@@ -18,7 +18,7 @@
     size="small"
     style="width: 180px"
   />
-  <jw-button v-else size="small" @click="showInput"> + New Tag </jw-button>
+  <xh-button v-else size="small" @click="showInput"> + New Tag </xh-button>
 </template>
 <script setup lang="ts">
 import { ref, nextTick, onMounted } from "vue";

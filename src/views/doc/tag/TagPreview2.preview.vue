@@ -1,6 +1,6 @@
-<preview>尺寸</preview>
+<preview>不同尺寸</preview>
 <template>
-  <jw-tag size="small">爱在西元前</jw-tag>
-  <jw-tag type="success">超人不会飞</jw-tag>
-  <jw-tag type="warning" size="large">哪里都是你</jw-tag>
+  <xh-tag type="primary" size="small">标签1</xh-tag>
+  <xh-tag type="primary" size="medium">标签2</xh-tag>
+  <xh-tag type="primary" size="large">标签3</xh-tag>
 </template>

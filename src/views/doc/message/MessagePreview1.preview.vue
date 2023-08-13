@@ -1,7 +1,7 @@
 <preview>基础使用</preview>
 <template>
-  <jw-button @click="open">Show Message</jw-button>
-  <jw-button @click="openVn">Vnode</jw-button>
+  <xh-button @click="open">Show Message</xh-button>
+  <xh-button @click="openVn">Vnode</xh-button>
 </template>
 
 <script setup lang="ts">

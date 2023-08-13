@@ -1,22 +1,26 @@
 <template>
   <div
-    class="jw-divider"
+    class="xh-divider"
     :class="{
       horizontal: direction === 'horizontal',
       vertical: direction === 'vertical',
     }"
   >
-    <div class="jw-divider-line horizontal" v-if="direction === 'horizontal'" />
+    <div
+      class="xh-divider-line horizontal"
+      :class="lineClasses"
+      v-if="direction === 'horizontal'"
+    />
 
     <div
-      class="jw-divider-title"
+      class="xh-divider-title"
       :class="classes"
       v-if="direction === 'horizontal'"
     >
       <slot></slot>
     </div>
 
-    <div class="jw-divider-line vertical" v-if="direction === 'vertical'" />
+    <div class="xh-divider-line vertical" v-if="direction === 'vertical'" />
   </div>
 </template>
 
@@ -31,6 +35,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  weight: {
+    type: Number,
+    default: 1,
+  },
   direction: {
     type: String,
     default: "horizontal",
@@ -42,15 +50,18 @@ const classes = computed(() => ({
   "is-right": props.titlePlacement === "right",
   "is-center": props.titlePlacement === "center",
 }));
+const lineClasses = computed(() => ({
+  [`weight-${props.weight}`]: true,
+}));
 </script>
 <script lang="ts">
 export default {
-  name: "JwDivider",
+  name: "xhDivider",
 };
 </script>
 
 <style lang="scss">
-.jw-divider {
+.xh-divider {
   display: flex;
   box-sizing: border-box;
   font-size: 16px;
@@ -62,7 +73,7 @@ export default {
     width: 100%;
   }
 
-  .jw-divider-line {
+  .xh-divider-line {
     background-color: #dcdfe6;
 
     &.horizontal {
@@ -82,7 +93,7 @@ export default {
     }
   }
 
-  .jw-divider-title {
+  .xh-divider-title {
     position: absolute;
     top: 0;
     font-size: 16px;
@@ -101,6 +112,11 @@ export default {
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
+  }
+}
+@for $i from 1 through 150 {
+  .weight-#{$i} {
+    height: (1px * $i) !important;
   }
 }
 </style>

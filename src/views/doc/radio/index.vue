@@ -44,7 +44,7 @@ const radioPropDoc = [
   ["label", "多选框对应的值", "string / number / boolean", "-", "-"],
   ["disabled", "是否禁用单选框", "boolean", "-", "false"],
   ["border", "是否显示边框", "boolean", "-", "false"],
-  ["size", "	Radio 的尺寸", "string", "large / default /small", "-"],
+  ["size", "	Radio 的不同尺寸", "string", "large / default /small", "-"],
   [
     "indeterminate",
     "设置 indeterminate 状态，只负责样式控制",
@@ -61,7 +61,7 @@ const radioGroupPropDoc = [
   ["v-model", "绑定值", "string / number / boolean", "-", "-"],
   ["disabled", "是否禁用", "boolean", "-", "false"],
   ["border", "是否显示边框", "boolean", "-", "false"],
-  ["size", "单选框组尺寸", "string", "large / default /small", "-"],
+  ["size", "单选框组不同尺寸", "string", "large / default /small", "-"],
 ];
 
 const radioGroupEventDoc = [

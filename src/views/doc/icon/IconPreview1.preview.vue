@@ -1,13 +1,25 @@
 <preview>基础用法</preview>
 <template>
-  <jw-icon>
-    <BatteryFull />
-  </jw-icon>
-  <jw-icon color="#4ad361">
-    <BatteryFull />
-  </jw-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
+  <xh-icon>
+    <ApertureSharp />
+  </xh-icon>
 </template>
 
 <script setup lang="ts">
-import { BatteryFull } from "@vicons/ionicons5";
+import { ApertureSharp } from "@vicons/ionicons5";
 </script>

@@ -9,13 +9,13 @@
     >
       <slot></slot>
     </span>
-    <jw-icon
+    <xh-icon
       v-if="parent?.separatorIcon"
       class="jw-breadcrumb-separator"
       :size="12"
     >
       <component :is="parent.separatorIcon" />
-    </jw-icon>
+    </xh-icon>
     <span v-else class="jw-breadcrumb-separator">{{ parent.separator }}</span>
   </span>
 </template>

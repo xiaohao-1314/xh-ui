@@ -1,5 +1,5 @@
 <template>
-  <span class="jw-avatar" :class="classes" :style="styles">
+  <span class="xh-avatar" :class="classes" :style="styles">
     <img
       v-if="src && !hasLoadError"
       :src="src"
@@ -25,6 +25,10 @@ const props = defineProps({
     type: String,
     default: "circle",
   },
+  fit: {
+    type: String,
+    default: "fill",
+  },
   alt: {
     type: String,
   },
@@ -37,13 +41,16 @@ const props = defineProps({
 });
 
 const emits = defineEmits(["error"]);
-
+const colorchange = (e) => {
+  console.log(e);
+};
 const hasLoadError = ref(false);
-const { size, shape, color, backgroundColor } = props;
+const { size, shape, color, backgroundColor, fit } = props;
 const classes = computed(() => {
   return {
-    [`jw-avatar-${size}`]: typeof size === "string",
-    [`jw-avatar-${shape}`]: shape,
+    [`xh-avatar-${size}`]: typeof size === "string",
+    [`xh-avatar-${shape}`]: shape,
+    [`xh-avatar-${fit}`]: fit,
   };
 });
 
@@ -69,7 +76,7 @@ const handleError = (e: Event) => {
 </script>
 <script lang="ts">
 export default {
-  name: "JwAvatar",
+  name: "xhAvatar",
 };
 </script>
 
@@ -81,7 +88,7 @@ $large-size: 56px;
 
 $white: #fff;
 $default-background: #c0c4cc;
-.jw-avatar {
+.xh-avatar {
   background-color: $default-background;
   display: inline-flex;
   align-items: center;
@@ -94,22 +101,22 @@ $default-background: #c0c4cc;
   }
 }
 
-.jw-avatar-small {
+.xh-avatar-small {
   width: $small-size;
   height: $small-size;
 }
 
-.jw-avatar-default {
+.xh-avatar-default {
   width: $default-size;
   height: $default-size;
 }
 
-.jw-avatar-large {
+.xh-avatar-large {
   width: $large-size;
   height: $large-size;
 }
 
-.jw-avatar-circle {
+.xh-avatar-circle {
   /* background-color: transparent; */
   border-radius: 100%;
   > img {
@@ -117,11 +124,41 @@ $default-background: #c0c4cc;
   }
 }
 
-.jw-avatar-square {
+.xh-avatar-square {
   /* background-color: transparent; */
   border-radius: 3px;
   > img {
     border-radius: 3px;
+  }
+}
+
+.xh-avatar-fill {
+  > img {
+    object-fit: fill;
+  }
+}
+
+.xh-avatar-contain {
+  > img {
+    object-fit: contain;
+  }
+}
+
+.xh-avatar-cover {
+  > img {
+    object-fit: cover;
+  }
+}
+
+.xh-avatar-none {
+  > img {
+    object-fit: none;
+  }
+}
+
+.xh-avatar-scale-down {
+  > img {
+    object-fit: scale-down;
   }
 }
 </style>

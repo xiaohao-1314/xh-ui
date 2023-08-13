@@ -31,7 +31,7 @@
       />
 
       <PrevAndNext
-        :prev="{ path: '/doc/tag', name: 'Tag 标签' }"
+        :prev="{ path: '/doc/colorPicker', name: 'Color Picker 选择器' }"
         :next="{ path: '/doc/input', name: '输入框 Input' }"
       />
     </div>
@@ -53,7 +53,7 @@ const checkboxPropDoc = [
   ["label", "单选框对应的值", "string / number / boolean", "-", "-"],
   ["disabled", "是否禁用单选框", "boolean", "-", "false"],
   ["border", "是否显示边框", "boolean", "-", "false"],
-  ["size", "	Checkbox 的尺寸", "string", "large / default /small", "-"],
+  ["size", "	Checkbox 的不同尺寸", "string", "large / default /small", "-"],
 ];
 
 const checkboxEventDoc = [
@@ -66,7 +66,7 @@ const checkboxGroupPropDoc = [
   ["v-model", "绑定值", "array", "-", "[]"],
   ["disabled", "是否禁用", "boolean", "-", "false"],
   ["border", "是否显示边框", "boolean", "-", "false"],
-  ["size", "多选框组尺寸", "string", "large / default /small", "-"],
+  ["size", "多选框组不同尺寸", "string", "large / default /small", "-"],
 ];
 
 const checkboxGroupEventDoc = [
@@ -78,7 +78,7 @@ const checkboxGroupSlotDoc = [["default", "自定义默认内容", "Checkbox"]];
 
 <style lang="scss">
 .checkbox-doc-wrapper {
-  .jw-checkbox {
+  .xh-checkbox {
     margin-right: 10px;
   }
 }

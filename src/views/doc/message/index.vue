@@ -60,7 +60,7 @@ const methodsDoc = [["close", "关闭当前的 Message", "-"]];
 
 <style lang="scss">
 .message-doc-wrapper {
-  .jw-button {
+  .xh-button {
     margin-right: 8px;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <label class="jw-checkbox-group">
+  <label class="xh-checkbox-group">
     <slot></slot>
   </label>
 </template>
@@ -25,11 +25,11 @@ provide(
 </script>
 <script lang="ts">
 export default {
-  name: "JwCheckboxGroup",
+  name: "xhCheckboxGroup",
 };
 </script>
 
 <style lang="scss">
-.jw-checkbox-group {
+.xh-checkbox-group {
 }
 </style>

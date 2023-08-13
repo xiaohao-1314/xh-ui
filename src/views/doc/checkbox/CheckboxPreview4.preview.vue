@@ -1,18 +1,18 @@
 <preview>中间状态</preview>
 <template>
-  <jw-checkbox
+  <xh-checkbox
     v-model="checkAll"
     :indeterminate="isIndeterminate"
     @change="handleCheckAllChange"
     label="全选"
   />
-  <jw-checkbox-group
+  <xh-checkbox-group
     @change="handleCheckedCitiesChange"
     v-model="checkedCities"
     size="large"
   >
-    <jw-checkbox v-for="city in cities" :key="city" :label="city" />
-  </jw-checkbox-group>
+    <xh-checkbox v-for="city in cities" :key="city" :label="city" />
+  </xh-checkbox-group>
 </template>
 
 <script setup lang="ts">

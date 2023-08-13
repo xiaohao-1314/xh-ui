@@ -1,9 +1,9 @@
 <preview>不同状态</preview>
 <template>
-  <jw-button @click="open1">Info</jw-button>
-  <jw-button @click="open2">success</jw-button>
-  <jw-button @click="open3">Warning</jw-button>
-  <jw-button @click="open4">Error</jw-button>
+  <xh-button @click="open1">Info</xh-button>
+  <xh-button @click="open2">success</xh-button>
+  <xh-button @click="open3">Warning</xh-button>
+  <xh-button @click="open4">Error</xh-button>
 </template>
 
 <script setup lang="ts">

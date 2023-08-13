@@ -2,13 +2,13 @@
   <div class="topnavAndBanner">
     <Topnav :toggleMenuButton="false" />
     <div class="banner">
-      <h1>JW UI</h1>
+      <h1>XH UI</h1>
       <p>一个 Vue 3 组件库</p>
-      <p>有点儿意思~</p>
+      <!-- <p>有点儿意思~</p> -->
       <div class="actions">
-        <jw-button @click="linkTo('github')">GitHub</jw-button>
-        <jw-button @click="linkTo('getStart')" theme="primary"
-          >快速使用</jw-button
+        <xh-button @click="linkTo('github')">GitHub</xh-button>
+        <xh-button @click="linkTo('getStart')" theme="primary"
+          >快速使用</xh-button
         >
       </div>
     </div>
@@ -21,14 +21,14 @@
           <use xlink:href="#icon-vue"></use>
         </svg>
         <h3>基于 Vue 3</h3>
-        <p>骄傲地使用了 Vue 3 Composition API</p>
+        <p>使用 Vue 3 Composition API</p>
       </li>
       <li>
         <svg>
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript</h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
+        <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
@@ -48,7 +48,7 @@ const router = useRouter();
 
 const linkTo = (params) => {
   if (params === "github") {
-    window.open("https://github.com/coderyjw/jw-ui", "_blank");
+    window.open("https://github.com/xiaohao-1314", "_blank");
   } else if (params === "getStart") {
     router.push({
       path: "/doc",
@@ -115,11 +115,11 @@ const linkTo = (params) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    .jw-button {
+    .xh-button {
       height: 40px;
       padding: 0 18px;
     }
-    .jw-button:last-of-type {
+    .xh-button:last-of-type {
       margin-left: 20px;
     }
   }

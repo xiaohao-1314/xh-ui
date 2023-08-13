@@ -1,7 +1,7 @@
 <template>
   <div class="gradient-text-doc-wrapper">
-    <h1>渐变文字 Gradient Text</h1>
-    <p>这个东西看起来没啥用，实际上确实没啥用。</p>
+    <h1>GradientText 渐变文字</h1>
+    <p>自定义文字的渐变色</p>
     <div class="preview-wrapper">
       <Preview :component="GradientTextPreview1" />
       <Preview :component="GradientTextPreview2" />
@@ -37,7 +37,7 @@ const propDoc = [
     "type",
     "渐变文字的类型",
     "string",
-    "info / success / warning / error",
+    "primary / info / success / warning / error",
     "primary",
   ],
 ];

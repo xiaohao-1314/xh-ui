@@ -2,9 +2,9 @@
   <div class="icon-doc-wrapper">
     <h1>Icon 图标</h1>
     <p>
-      JW-UI 推荐使用
+      xh-UI 推荐使用
       <a
-        style="text-decoration: underline; color: #18a058"
+        style="text-decoration: underline; color: #4098fc"
         href="https://www.xicons.org/#/"
         target="_blank"
         >xicons</a
@@ -50,7 +50,7 @@ const slotDoc = [["defalut", "自定义默认内容"]];
 
 <style lang="scss">
 .icon-doc-wrapper {
-  .jw-icon {
+  .xh-icon {
     margin-right: 8px;
     margin-top: 8px;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div @click="toggle" class="jw-ellipsis" :class="classes" :style="styles">
+  <div @click="toggle" class="xh-ellipsis" :class="classes" :style="styles">
     <slot></slot>
   </div>
 </template>
@@ -10,18 +10,23 @@ const props = defineProps({
   lineClamp: {
     type: Number,
   },
+  width: {
+    type: Number,
+    default: 300,
+  },
   expandTrigger: String,
 });
-const { lineClamp, expandTrigger } = props;
+const { lineClamp, expandTrigger, width } = props;
 
 const classes = computed(() => ({
-  ["jw-ellipsis-line-clamp"]: lineClamp,
-  ["jw-ellipsis-expand-trigger"]: expandTrigger,
+  ["xh-ellipsis-line-clamp"]: lineClamp,
+  ["xh-ellipsis-expand-trigger"]: expandTrigger,
 }));
 
 let styles = reactive({});
 const isExpand = ref(false);
 styles["-webkit-line-clamp"] = lineClamp;
+styles["max-width"] = width + "px";
 
 watch(
   () => isExpand.value,
@@ -38,27 +43,27 @@ const toggle = () => {
 </script>
 <script lang="ts">
 export default {
-  name: "JwEllipsis",
+  name: "xhEllipsis",
 };
 </script>
 <style lang="scss">
-.jw-ellipsis {
+.xh-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
 
-  &:not(.jw-ellipsis-line-clamp) {
+  &:not(.xh-ellipsis-line-clamp) {
     white-space: nowrap;
     display: inline-block;
     text-overflow: ellipsis;
   }
 
-  &.jw-ellipsis-line-clamp {
+  &.xh-ellipsis-line-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
 
-  &.jw-ellipsis-expand-trigger {
+  &.xh-ellipsis-expand-trigger {
     cursor: pointer;
   }
 }

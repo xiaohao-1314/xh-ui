@@ -1,8 +1,6 @@
 <preview>展开方式</preview>
 <template>
-  <jw-ellipsis style="max-width: 300px" :line-clamp="2" expand-trigger="click">
-    感受痛苦吧，考虑痛苦吧，接受痛苦吧，了解痛苦吧。
-    不了解痛楚的人，是无法了解真正的和平的！ 我不会忘记弥彦的痛苦（极小声说）
-    从现在开始，让世界感受痛苦！神罗天征！
-  </jw-ellipsis>
+  <xh-ellipsis :line-clamp="2" expand-trigger="click" :width="700">
+    她想要的是，事事有回应，件件有着落，不要求你及时回复她，只希望的是她发了信息之后，你在忙完自己的事情之后，告诉了她，你去干了什么事情，然后回复她都可以，这就是她想要的安全感。
+  </xh-ellipsis>
 </template>

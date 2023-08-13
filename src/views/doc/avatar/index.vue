@@ -37,6 +37,13 @@ const propsDoc = [
     "default",
   ],
   ["shape", "设置头像的形状", "string", "circle / square", "circle"],
+  [
+    "fit",
+    "当展示类型为图片的时候，设置图片如何适应容器框",
+    "string",
+    "fill / contain / cover / none / scale-down",
+    "fill",
+  ],
   ["src", "图片头像的资源地址", "string", "-", "-"],
   ["alt", "描述图像的替换文本", "string", "-", "-"],
 ];
@@ -44,7 +51,7 @@ const eventDoc = [
   [
     "error",
     "图片类头像加载失败的回调， 返回 false 会关闭组件默认的 fallback 行为",
-    "(e: Event)",
+    "(): Event => {}",
   ],
 ];
 const slotDoc = [["default", "自定义头像展示内容"]];
@@ -52,9 +59,16 @@ const slotDoc = [["default", "自定义头像展示内容"]];
 
 <style lang="scss">
 .avatar-doc-wrapper {
-  .jw-avatar {
+  .xh-avatar {
     margin-right: 8px;
     margin-top: 8px;
   }
+}
+.img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 </style>

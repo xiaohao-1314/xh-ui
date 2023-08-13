@@ -1,10 +1,10 @@
 <preview>多选框组</preview>
 <template>
-  <jw-checkbox-group v-model="checkList" size="large">
-    <jw-checkbox label="选项A" />
-    <jw-checkbox label="选项B" />
-    <jw-checkbox label="选项C" />
-  </jw-checkbox-group>
+  <xh-checkbox-group v-model="checkList" size="large">
+    <xh-checkbox label="选项A" />
+    <xh-checkbox label="选项B" />
+    <xh-checkbox label="选项C" />
+  </xh-checkbox-group>
 </template>
 
 <script setup lang="ts">

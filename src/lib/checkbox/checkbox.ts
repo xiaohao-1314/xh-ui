@@ -74,22 +74,22 @@ export const useCheckbox = (props, emits) => {
   const iconColor = computed(() => {
     if (disabled.value) {
       if (!isGroup.value) {
-        return modelValue.value ? "#c2c2c2" : "#fff";
+        return modelValue.value ? "#c2c2c2" : "transparent";
       } else {
-        return modelValue.value.indexOf(label.value) > -1 ? "#c2c2c2" : "#fff";
+        return modelValue.value.indexOf(label.value) > -1 ? "#c2c2c2" : "transparent";
       }
     } else {
       return "#fff";
     }
   });
-
+ 
   const indeterminate = computed(() => props.indeterminate);
   const border = computed(() => props.border);
   const classes = computed(() => ({
     "is-checked": isGroup.value
       ? modelValue.value.indexOf(label.value) > -1 && !indeterminate.value
       : modelValue.value && !indeterminate.value,
-    [`jw-checkbox-${size.value}`]: size.value,
+    [`xh-checkbox-${size.value}`]: size.value,
     "is-disabled": disabled.value,
     "is-indeterminate": indeterminate.value,
     "is-border": border.value,

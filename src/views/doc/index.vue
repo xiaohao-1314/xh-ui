@@ -30,27 +30,27 @@
       <main :style="mainStyle" id="doc-content-container">
         <router-view />
       </main>
+      <div class="top-button" @click="topClick">🔼</div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import Topnav from "@/components/Topnav.vue";
-import { inject, type Ref, computed } from "vue";
+import { inject, type Ref, computed, onMounted } from "vue";
 import { docMenus } from "@/router/doc-routes.ts";
 const asideVisible = inject<Ref<boolean>>("asideVisible");
 const clientWidth = inject<Ref<number>>("clientWidth");
-
 const toggleAside = () => {
   asideVisible.value = !asideVisible.value;
 };
 
 const asideStyle = computed(() => {
-  return { left: asideVisible.value ? "0px" : "-272px" };
+  return { left: asideVisible.value ? "0px" : "-285px" };
 });
 
 const toggleAsidStyle = computed(() => {
   return {
-    left: asideVisible.value ? "272px" : "0px",
+    left: asideVisible.value ? "285px" : "0px",
     transform: asideVisible.value
       ? "rotate(180deg) translateX(50%)"
       : "rotate(0deg) translateX(50%)",
@@ -60,8 +60,33 @@ const toggleAsidStyle = computed(() => {
 const mainStyle = computed(() => {
   return clientWidth.value < 500
     ? { "padding-left": "24px" }
-    : { "padding-left": asideVisible.value ? "302px" : "60px" };
+    : { "padding-left": asideVisible.value ? "325px" : "60px" };
 });
+
+const scrollToTop = (
+  scrollContainer: HTMLElement,
+  speed: number = 10,
+  step: number = 10
+) => {
+  // scrollContainer：要滚动的容器元素，可以是 window 或任意具有 scrollTop 属性的元素
+  // speed：每次滚动的距离，即返回顶部的速度，默认为 10
+  // step：每次滚动的时间间隔，单位为毫秒，默认为 10
+  let scrollTop = scrollContainer.scrollTop;
+  const time = setInterval(() => {
+    scrollTop -= speed;
+    if (scrollTop <= 0) {
+      clearInterval(time);
+      scrollContainer.scrollTop = 0;
+    } else {
+      scrollContainer.scrollTop = scrollTop;
+    }
+  }, step);
+};
+
+const topClick = () => {
+  const container = document.getElementById("doc-content-container");
+  scrollToTop(container, 80, 10);
+};
 </script>
 <style lang="scss">
 .layout {
@@ -127,13 +152,13 @@ const mainStyle = computed(() => {
         font-size: 14px;
 
         &:hover {
-          color: #18a058 !important;
+          color: #4098fc !important;
         }
       }
 
       .router-link-exact-active {
-        color: #18a058 !important;
-        background-color: #e7f5ee;
+        color: #4098fc !important;
+        // background-color: #e7f5ee;
         border-radius: 3px;
       }
     }
@@ -154,7 +179,7 @@ const mainStyle = computed(() => {
         font-size: 14px;
       }
       .preview-wrapper {
-        width: 80%;
+        width: 90%;
 
         @media (max-width: 500px) {
           width: 100%;
@@ -165,9 +190,9 @@ const mainStyle = computed(() => {
 }
 
 .toggle-button {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
+  width: 30px;
+  height: 50px;
+  // border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,19 +200,32 @@ const mainStyle = computed(() => {
   border: 1px solid rgb(239, 239, 245);
   position: absolute;
   left: 272px;
-  top: 240px;
+  top: 260px;
   background-color: #fff;
   box-shadow: 0 2px 4px 0px rgb(0 0 0 / 6%);
   transition: left 250ms ease, transform 0.1s ease;
   z-index: 10;
+  transition: all 250ms;
 
   > .icon {
     width: 12px;
     height: 12px;
   }
+  &:hover {
+    background: #4098fc;
+    color: #ffffff;
+  }
 
   @media (max-width: 500px) {
     display: none;
   }
+}
+.top-button {
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+  padding: 10px;
+  font-size: 32px;
+  cursor: pointer;
 }
 </style>

@@ -2,7 +2,7 @@
   点击遮罩
 </preview>
 <template>
-  <jw-button theme="primary" @click="toggle">点击打开对话框</jw-button>
+  <xh-button theme="primary" @click="toggle">点击打开对话框</xh-button>
   <jw-dialog
     v-model="visible"
     :overlay-closable="false"

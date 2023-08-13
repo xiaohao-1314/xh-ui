@@ -1,8 +1,7 @@
 <template>
   <div class="ellipsis-doc-wrapper">
     <h1>Ellipsis 文本省略</h1>
-    <p>复杂度不会消失，只会转移。</p>
-    <p>当你听到一些人对于精致的概念模型侃侃而谈，请保持清醒。</p>
+    <p>文本超出范围为省略号</p>
     <div class="preview-wrapper">
       <Preview :component="EllipsisPreview1" />
       <Preview :component="EllipsisPreview2" />
@@ -28,6 +27,7 @@ import EllipsisPreview3 from "./EllipsisPreview3.preview.vue";
 const propDoc = [
   ["expand-trigger", "展开的触发方式", "string", "click", "-"],
   ["line-clamp", "	最大行数", "number / string", "-", "-"],
+  ["width", "	最大宽度", "number", "-", "300"],
 ];
 
 const slotDoc = [["default", "	文本省略的内容"]];

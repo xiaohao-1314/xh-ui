@@ -1,13 +1,18 @@
-<preview>尺寸</preview>
+<preview>不同尺寸</preview>
 <template>
   <div>
-    <jw-gradient-text type="info" :size="26">消息来了</jw-gradient-text>
+    <xh-gradient-text type="info" size="26"
+      >如果她是对的人，哪怕不及时回复消息，依旧对她充满安全感</xh-gradient-text
+    >
     <br /><br />
-    <jw-gradient-text type="warning" :size="22">警告你了</jw-gradient-text
+    <xh-gradient-text type="warning" size="22"
+      >如果她是对的人，哪怕不及时回复消息，依旧对她充满安全感</xh-gradient-text
     ><br /><br />
-    <jw-gradient-text type="error" :size="18">危险危险</jw-gradient-text
+    <xh-gradient-text type="error" size="18"
+      >如果她是对的人，哪怕不及时回复消息，依旧对她充满安全感</xh-gradient-text
     ><br /><br />
-    <jw-gradient-text type="success" :size="14">一切正常</jw-gradient-text
+    <xh-gradient-text type="success" size="14"
+      >如果她是对的人，哪怕不及时回复消息，依旧对她充满安全感</xh-gradient-text
     ><br /><br />
   </div>
 </template>

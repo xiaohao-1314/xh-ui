@@ -1,5 +1,5 @@
 <template>
-  <div class="jw-gradient-text" :class="classes" :style="style">
+  <div class="xh-gradient-text" :class="classes" :style="style">
     <slot></slot>
   </div>
 </template>
@@ -38,7 +38,7 @@ const style = computed(() => ({
 </script>
 <script lang="ts">
 export default {
-  name: "JwGradientText",
+  name: "xhGradientText",
 };
 </script>
 
@@ -52,7 +52,7 @@ $success-end-color: #18a058;
 $warning-start-color: rgba(240, 160, 32, 0.6);
 $warning-end-color: #f0a020;
 
-.jw-gradient-text {
+.xh-gradient-text {
   display: inline-block;
   color: #0000;
   font-weight: 500;

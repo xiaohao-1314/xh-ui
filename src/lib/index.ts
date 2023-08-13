@@ -1,16 +1,17 @@
 import { App } from "vue";
 
-import JwAvatar from "./avatar/index.vue";
-import JwButton from "./button/index.vue";
-import JwDivider from "./divider/index.vue";
-import JwEllipsis from "./ellipsis/index.vue";
-import JwGradientText from "./gradient-text/index.vue";
-import JwIcon from "./icon/index.vue";
-import JwLink from "./link/index.vue";
-import JwTag from "./tag/index.vue";
+import xhAvatar from "./avatar/index.vue";
+import xhButton from "./button/index.vue";
+import xhDivider from "./divider/index.vue";
+import xhEllipsis from "./ellipsis/index.vue";
+import xhGradientText from "./gradient-text/index.vue";
+import xhIcon from "./icon/index.vue";
+import xhLink from "./link/index.vue";
+import xhTag from "./tag/index.vue";
+import xhColorPicker from "./color-picker/index.vue";
 
-import JwCheckbox from "./checkbox/checkbox.vue";
-import JwCheckboxGroup from "./checkbox/checkbox-group.vue";
+import xhCheckbox from "./checkbox/checkbox.vue";
+import xhCheckboxGroup from "./checkbox/checkbox-group.vue";
 import JwInput from "./input/index.vue";
 import JwRadio from "./radio/radio.vue";
 import JwRadioGroup from "./radio/radio-group.vue";
@@ -33,17 +34,18 @@ import JwTab from "./tab/index.vue";
 
 export {
   /* 通用组件 */
-  JwAvatar,
-  JwButton,
-  JwDivider,
-  JwEllipsis,
-  JwGradientText,
-  JwIcon,
-  JwLink,
-  JwTag,
+  xhAvatar,
+  xhButton,
+  xhDivider,
+  xhEllipsis,
+  xhGradientText,
+  xhIcon,
+  xhLink,
+  xhTag,
+  xhColorPicker,
   /* 数据录入组件 */
-  JwCheckbox,
-  JwCheckboxGroup,
+  xhCheckbox,
+  xhCheckboxGroup,
   JwInput,
   JwRadio,
   JwRadioGroup,
@@ -66,17 +68,18 @@ export {
 };
 
 const components = [
-  JwAvatar,
-  JwButton,
-  JwDivider,
-  JwEllipsis,
-  JwGradientText,
-  JwIcon,
-  JwLink,
-  JwTag,
+  xhAvatar,
+  xhButton,
+  xhDivider,
+  xhEllipsis,
+  xhGradientText,
+  xhIcon,
+  xhLink,
+  xhTag,
+  xhColorPicker,
 
-  JwCheckbox,
-  JwCheckboxGroup,
+  xhCheckbox,
+  xhCheckboxGroup,
   JwInput,
   JwRadio,
   JwRadioGroup,

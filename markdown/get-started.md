@@ -33,7 +33,7 @@ import "yjw-ui/dist/lib/yjw-ui.css";
 
 ```html
 <template>
-  <jw-button>按钮</jw-button>
+  <xh-button>按钮</xh-button>
 </template>
 ```
 

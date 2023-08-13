@@ -2,9 +2,9 @@
   <div class="jw-page-header">
     <div class="jw-page-header-left">
       <slot name="icon">
-        <jw-icon class="jw-page-header-icon" :size="18" @click="handleBack">
+        <xh-icon class="jw-page-header-icon" :size="18" @click="handleBack">
           <component :is="icon" />
-        </jw-icon>
+        </xh-icon>
       </slot>
       <slot name="title">
         <div class="jw-page-header-title">{{ title }}</div>

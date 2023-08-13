@@ -1,17 +1,17 @@
 <template>
   <label
-    class="jw-checkbox"
+    class="xh-checkbox"
     :class="classes"
     @click="handleChange"
     tabindex="0"
   >
-    <span class="jw-checkbox-input" :class="classes">
-      <jw-icon :color="iconColor" :size="iconSize">
+    <span class="xh-checkbox-input" :class="classes">
+      <xh-icon :color="iconColor" :size="iconSize">
         <Subtract12Filled v-if="indeterminate" />
         <Check v-else />
-      </jw-icon>
+      </xh-icon>
     </span>
-    <span class="jw-checkbox-label" :class="classes">
+    <span class="xh-checkbox-label" :class="classes">
       <slot>{{ label }}</slot>
     </span>
   </label>
@@ -35,8 +35,11 @@ const {
   isGroup,
   indeterminate,
 } = useCheckbox(props, emits);
+// 按钮点击事件
 const handleChange = () => {
+  // 非禁用
   if (!disabled.value) {
+    // 按钮组类型
     if (isGroup.value) {
       const index = modelValue.value.indexOf(label.value);
       if (index > -1) {
@@ -46,6 +49,7 @@ const handleChange = () => {
       }
       modelValue.value = [...modelValue.value];
     } else {
+      // 非按钮组类型
       modelValue.value = !modelValue.value;
     }
   }
@@ -54,12 +58,12 @@ const handleChange = () => {
 
 <script lang="ts">
 export default {
-  name: "JwCheckbox",
+  name: "xhCheckbox",
 };
 </script>
 
 <style lang="scss">
-$primary-color: #4b9e5f;
+$primary-color: #4098fc;
 
 $large-size: 16px;
 $default-size: 14px;
@@ -69,7 +73,7 @@ $large-height: 40px;
 $default-height: 32px;
 $small-height: 24px;
 
-.jw-checkbox {
+.xh-checkbox {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -79,20 +83,20 @@ $small-height: 24px;
     cursor: not-allowed;
   }
 
-  &.jw-checkbox-large {
+  &.xh-checkbox-large {
     height: $large-height;
   }
 
-  &.jw-checkbox-small {
+  &.xh-checkbox-small {
     height: $small-height;
   }
 
-  &:not(.is-disabled):hover .jw-checkbox-input {
-    border: 1px solid #4b9e5f;
+  &:not(.is-disabled):hover .xh-checkbox-input {
+    border: 1px solid $primary-color;
   }
-  &:not(.is-disabled):focus .jw-checkbox-input {
-    box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
-    border: 1px solid #4b9e5f;
+  &:not(.is-disabled):focus .xh-checkbox-input {
+    // box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+    border: 1px solid $primary-color;
   }
 
   &.is-border {
@@ -103,19 +107,19 @@ $small-height: 24px;
     &.is-checked:not(.is-disabled),
     &.is-indeterminate:not(.is-disabled) {
       color: $primary-color;
-      border: 1px solid #18a058;
+      border: 1px solid $primary-color;
     }
 
-    &.jw-checkbox-large {
+    &.xh-checkbox-large {
       padding: 0 12px;
     }
 
-    &.jw-checkbox-small {
+    &.xh-checkbox-small {
       padding: 0 8px;
     }
   }
 
-  > .jw-checkbox-input {
+  > .xh-checkbox-input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -127,17 +131,17 @@ $small-height: 24px;
 
     &.is-checked {
       background-color: $primary-color;
-      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
-      border: 1px solid #18a058;
+      // box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+      border: 1px solid $primary-color;
       transition: all 0.3s ease-in-out;
     }
 
-    &.jw-checkbox-large {
+    &.xh-checkbox-large {
       width: $large-size;
       height: $large-size;
     }
 
-    &.jw-checkbox-small {
+    &.xh-checkbox-small {
       width: $small-size;
       height: $small-size;
     }
@@ -150,21 +154,21 @@ $small-height: 24px;
 
     &.is-indeterminate {
       background-color: $primary-color;
-      border: 1px solid #18a058;
-      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+      border: 1px solid $primary-color;
+      // box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
     }
   }
-  > .jw-checkbox-label {
+  > .xh-checkbox-label {
     padding: 0 10px;
     user-select: none;
     color: rgb(51, 54, 57);
     font-size: $default-size;
 
-    &.jw-checkbox-large {
+    &.xh-checkbox-large {
       font-size: $large-size;
     }
 
-    &.jw-checkbox-small {
+    &.xh-checkbox-small {
       font-size: $small-size;
     }
 

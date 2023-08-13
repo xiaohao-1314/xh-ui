@@ -18,49 +18,49 @@
       @mouseenter="clearTimer"
       @mouseleave="startTimer"
     >
-      <jw-icon
+      <xh-icon
         class="jw-message-icon"
         :size="22"
         v-if="type === 'info'"
         color="#3f7ee8"
       >
         <Info24Filled />
-      </jw-icon>
-      <jw-icon
+      </xh-icon>
+      <xh-icon
         class="jw-message-icon"
         :size="22"
         v-if="type === 'success'"
         color="#4b9e5f"
       >
         <IosCheckmarkCircle />
-      </jw-icon>
-      <jw-icon
+      </xh-icon>
+      <xh-icon
         class="jw-message-icon"
         :size="22"
         v-if="type === 'warning'"
         color="#e4a341"
       >
         <WarningFilled />
-      </jw-icon>
-      <jw-icon
+      </xh-icon>
+      <xh-icon
         class="jw-message-icon"
         :size="22"
         v-if="type === 'error'"
         color="#bf3f53"
       >
         <CloseCircle />
-      </jw-icon>
+      </xh-icon>
       <slot>
         {{ message }}
       </slot>
-      <jw-icon
+      <xh-icon
         v-if="showClose"
         :size="18"
         class="jw-close-icon"
         @click.stop="close"
       >
         <Close />
-      </jw-icon>
+      </xh-icon>
     </div>
   </transition>
 </template>

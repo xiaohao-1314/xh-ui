@@ -2,9 +2,9 @@
 <template>
   <jw-alert title="Default 类型" center>
     <template #icon>
-      <jw-icon class="jw-alert-icon" :size="22">
+      <xh-icon class="jw-alert-icon" :size="22">
         <IosAirplane />
-      </jw-icon>
+      </xh-icon>
     </template>
   </jw-alert>
   <jw-alert title="Info 类型" type="info" show-icon center />

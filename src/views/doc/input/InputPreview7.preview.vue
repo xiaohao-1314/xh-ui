@@ -1,8 +1,8 @@
 <preview>手动 focus & select & blur</preview>
 <template>
-  <jw-button @click="handleFocus">Focus</jw-button>
-  <jw-button @click="handleSelect">Select</jw-button>
-  <jw-button @click="handleBlur">Blur</jw-button>
+  <xh-button @click="handleFocus">Focus</xh-button>
+  <xh-button @click="handleSelect">Select</xh-button>
+  <xh-button @click="handleBlur">Blur</xh-button>
   <jw-input placeholder="请输入内容" v-model="value" ref="inputInstRef" />
 </template>
 

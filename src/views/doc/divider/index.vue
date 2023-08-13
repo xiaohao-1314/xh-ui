@@ -1,11 +1,12 @@
 <template>
   <div class="divider-doc-wrapper">
-    <h1>分割线 Divider</h1>
+    <h1>Divider 分割线</h1>
     <p>区隔内容的分割线。</p>
     <div class="preview-wrapper">
       <Preview :component="DividerPreview1" />
       <Preview :component="DividerPreview2" />
       <Preview :component="DividerPreview3" />
+      <Preview :component="DividerPreview4" />
       <Doc title="属性" type="prop" :body="propDoc" />
       <Doc title="插槽" type="slot" :body="slotDoc" />
       <PrevAndNext
@@ -21,6 +22,7 @@ import Preview from "@/components/Preview.vue";
 import DividerPreview1 from "./DividerPreview1.preview.vue";
 import DividerPreview2 from "./DividerPreview2.preview.vue";
 import DividerPreview3 from "./DividerPreview3.preview.vue";
+import DividerPreview4 from "./DividerPreview4.preview.vue";
 import Doc from "@/components/Doc.vue";
 import PrevAndNext from "@/components/PrevAndNext.vue";
 
@@ -33,6 +35,7 @@ const propDoc = [
     "horizontal / vertical",
     "horizontal",
   ],
+  ["weight", "设置分割线重量", "number", "数值类型（最大为150）", "1"],
 ];
 const slotDoc = [["default", "分割线的标题"]];
 </script>

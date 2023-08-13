@@ -2,7 +2,7 @@
 <template>
   <div class="affix-container">
     <jw-affix target=".affix-container" :offset="80">
-      <jw-button theme="primary">距离顶部80px固定 始终在target容器中</jw-button>
+      <xh-button theme="primary">距离顶部80px固定 始终在target容器中</xh-button>
     </jw-affix>
   </div>
 </template>

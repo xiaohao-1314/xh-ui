@@ -2,9 +2,9 @@
 <template>
   <jw-alert title="Default 类型" closeable description="这是一段描述">
     <template #icon>
-      <jw-icon class="jw-alert-icon" :size="22">
+      <xh-icon class="jw-alert-icon" :size="22">
         <IosAirplane />
-      </jw-icon>
+      </xh-icon>
     </template>
   </jw-alert>
   <jw-alert

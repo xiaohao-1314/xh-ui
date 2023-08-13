@@ -1,5 +1,5 @@
 <preview>
-尺寸
+不同尺寸
 </preview>
 <template>
   <jw-switch v-model="checked" size="small" />

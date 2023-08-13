@@ -13,9 +13,9 @@
       @click.stop="handleClick"
     >
       <slot>
-        <jw-icon :size="26">
+        <xh-icon :size="26">
           <BackToTop />
-        </jw-icon>
+        </xh-icon>
       </slot>
     </div>
   </transition>

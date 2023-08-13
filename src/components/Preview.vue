@@ -2,8 +2,8 @@
   <div class="preview-container">
     <h2>
       {{ component.__sourceCodeTitle }}
-      <jw-button @click="hideCode" v-if="codeVisible">隐藏代码</jw-button>
-      <jw-button @click="showCode" v-else>查看代码</jw-button>
+      <xh-button @click="hideCode" v-if="codeVisible">隐藏代码</xh-button>
+      <xh-button @click="showCode" v-else>查看代码</xh-button>
     </h2>
     <div class="preview-container-component">
       <component :is="component" />
@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import "prismjs";
-import "prismjs/themes/prism.css";
+import "prismjs/themes/prism-solarizedlight.css";
 import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 const props = defineProps({
@@ -31,6 +31,7 @@ const html = computed(() => {
     "html"
   );
 });
+
 const showCode = () => (codeVisible.value = true);
 const hideCode = () => (codeVisible.value = false);
 const codeVisible = ref(false);
@@ -44,9 +45,10 @@ $border-color: #d9d9d9;
   margin: 32px 0px 32px;
   min-width: 300px;
   > h2 {
-    font-size: 20px;
+    font-size: 16px;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;

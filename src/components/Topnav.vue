@@ -9,16 +9,17 @@
       <use xlink:href="#icon-list"></use>
     </svg>
     <div class="logo" @click="getHome">
-      <svg class="icon" aria-hidden="true">
+      xiaohao
+      <!-- <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-leaf"></use>
-      </svg>
+      </svg> -->
       <!-- <span>JW UI</span> -->
     </div>
     <div class="menu">
       <router-link exact to="/home">首页</router-link>
       <router-link to="/doc">文档</router-link>
-      <a href="https://github.com/coderyjw/jw-ui" target="_blank">GitHub</a>
-      <span>0.0.17</span>
+      <!-- <a href="https://github.com/coderyjw/jw-ui" target="_blank">GitHub</a> -->
+      <span>v1.0.21</span>
     </div>
   </div>
 </template>
@@ -65,6 +66,8 @@ const getHome = () => {
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
     > svg {
       width: 32px;
       height: 32px;
@@ -89,15 +92,16 @@ const getHome = () => {
       padding: 0 20px;
       height: 63px;
       line-height: 63px;
+      font-size: 14px;
 
       &:hover,
       &:active {
-        color: rgb(24, 160, 88);
+        color: #4098fc;
       }
     }
 
     .router-link-active {
-      color: rgb(24, 160, 88);
+      color: #4098fc;
       border-bottom: 1px solid;
     }
 

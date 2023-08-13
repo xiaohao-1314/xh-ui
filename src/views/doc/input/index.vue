@@ -70,7 +70,7 @@ const methodsDoc = [
     margin-right: 8px;
     margin-bottom: 8px;
   }
-  .jw-button {
+  .xh-button {
     margin-right: 8px;
     margin-bottom: 8px;
   }

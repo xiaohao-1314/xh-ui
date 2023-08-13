@@ -1,5 +1,5 @@
 <template>
-  <Icon class="jw-icon" :size="size" :style="{ opacity: `${depth / 10}` }">
+  <Icon class="xh-icon" :size="size" :style="{ opacity: `${depth / 10}` }">
     <slot></slot>
   </Icon>
 </template>
@@ -18,12 +18,12 @@ const attrs = useAttrs();
 </script>
 <script lang="ts">
 export default {
-  name: "JwIcon",
+  name: "xhIcon",
 };
 </script>
 
 <style lang="scss">
-.jw-icon {
+.xh-icon {
   display: inline-block;
   > span {
     display: inline-block;

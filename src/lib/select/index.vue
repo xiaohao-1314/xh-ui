@@ -12,7 +12,7 @@
       <div v-show="!modelLabel" class="jw-select-placeholder">
         {{ placeholder }}
       </div>
-      <jw-icon
+      <xh-icon
         :size="18"
         class="jw-select-suffix"
         @mousemove="clearable ? (closeVisible = true) : ''"
@@ -24,21 +24,21 @@
           @click="handleClear"
         />
         <IosArrowDown v-else />
-      </jw-icon>
+      </xh-icon>
     </div>
     <div class="jw-base-select jw-select-tags" v-if="multiple">
-      <jw-tag
+      <xh-tag
         closeable
         v-for="(item, index) in modelLabel"
         :key="index"
         @close="handleClear(item)"
-        >{{ item }}</jw-tag
+        >{{ item }}</xh-tag
       >
       <div v-show="modelLabel.length === 0" class="jw-select-placeholder">
         {{ placeholder }}
       </div>
 
-      <jw-icon
+      <xh-icon
         :size="18"
         class="jw-select-suffix"
         @mousemove="clearable ? (closeVisible = true) : ''"
@@ -50,7 +50,7 @@
           @click="handleClear"
         />
         <IosArrowDown v-else />
-      </jw-icon>
+      </xh-icon>
     </div>
     <div class="jw-select-dropdown">
       <div class="no-options" v-show="options.length === 0">无选项</div>
@@ -67,14 +67,14 @@
         :key="item.value"
         @click="handleOptionClick(item)"
       >
-        <jw-ellipsis>{{ item.label }}</jw-ellipsis>
-        <jw-icon
+        <xh-ellipsis>{{ item.label }}</xh-ellipsis>
+        <xh-icon
           :size="18"
           class="jw-select-option-suffix-icon"
           v-if="multiple && modelValue.includes(item.value)"
         >
           <Check />
-        </jw-icon>
+        </xh-icon>
       </span>
     </div>
   </div>

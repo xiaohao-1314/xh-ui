@@ -1,22 +1,22 @@
 <preview>图标</preview>
 <template>
-  <jw-button theme="primary" icon-placement="right">
+  <xh-Button type="primary" icon-placement="right">
     <template #icon>
-      <jw-icon size="20">
-        <VehicleBicycle24Filled />
-      </jw-icon>
+      <xh-icon size="20">
+        <Add16Regular />
+      </xh-icon>
     </template>
     默认按钮
-  </jw-button>
-  <jw-button theme="primary">
+  </xh-Button>
+  <xh-Button type="primary">
     <template #icon>
-      <jw-icon size="20">
-        <VehicleBicycle24Filled />
-      </jw-icon>
+      <xh-icon size="20">
+        <Add16Regular />
+      </xh-icon>
     </template>
     默认按钮
-  </jw-button>
+  </xh-Button>
 </template>
 <script setup lanng="scss">
-import { VehicleBicycle24Filled } from "@vicons/fluent";
+import { Add16Regular } from "@vicons/fluent";
 </script>

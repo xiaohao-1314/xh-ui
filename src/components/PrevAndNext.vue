@@ -55,7 +55,7 @@ const handleNextClick = () => {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-  color: #36ad6a;
+  color: #4098fc;
   cursor: pointer;
 }
 </style>

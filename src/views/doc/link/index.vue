@@ -47,7 +47,7 @@ const slotDoc = [["default", "自定义默认内容"]];
 
 <style lang="scss">
 .link-doc-wrapper {
-  .jw-link {
+  .xh-link {
     margin-right: 10px;
   }
 }

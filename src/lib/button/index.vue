@@ -1,6 +1,6 @@
 <template>
-  <button class="jw-button" :class="classes">
-    <span v-if="loading" class="jw-loadingIndicator"></span>
+  <button class="xh-button" :class="classes" @click="onClick">
+    <span v-if="loading" class="xh-loadingIndicator"></span>
 
     <div v-if="iconPlacement === 'left' && solts.icon" class="slot-icon-left">
       <slot name="icon"></slot>
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from "vue";
 const props = defineProps({
-  theme: {
+  type: {
     type: String,
     default: "default",
   },
@@ -49,23 +49,27 @@ const props = defineProps({
   },
 });
 
-const { theme, dashed, size, round, disabled, circle } = props;
+const { type, dashed, size, round, disabled, circle } = props;
 const solts = useSlots();
 const classes = computed(() => {
   return {
-    [`jw-theme-${theme}`]: theme,
+    [`xh-type-${type}`]: type,
     [`is-dashed`]: dashed,
-    [`jw-button-${size}`]: size,
+    [`xh-button-${size}`]: size,
     [`is-round`]: round,
     [`is-circle`]: circle,
     [`is-disabled`]: disabled,
   };
 });
+const emits = defineEmits(["click"]);
+const onClick = () => {
+  emits("click");
+};
 </script>
 
 <script lang="ts">
 export default {
-  name: "JwButton",
+  name: "xhButton",
 };
 </script>
 
@@ -75,9 +79,9 @@ $h-small: 32px;
 $h-large: 48px;
 $white: #fff;
 $default-color: #333;
-$primary-color: #36ad6a;
-$info-color: #4098fc;
-$success-color: #85ce61;
+$primary-color: #4098fc;
+$info-color: #909399;
+$success-color: #67c23a;
 $warning-color: #f0a020;
 $error-color: #d03050;
 $grey: grey;
@@ -87,7 +91,7 @@ $default-border-color: #d9d9d9;
 $radius: 3px;
 $green: #18a058;
 
-.jw-button {
+.xh-button {
   box-sizing: border-box;
   height: $h-default;
   font-size: 14px;
@@ -113,60 +117,101 @@ $green: #18a058;
     border: 0;
   }
 
-  &.is-circle.jw-button-default {
+  &.is-circle.xh-button-default {
     border-radius: 100%;
     height: $h-default;
     width: $h-default;
   }
-  &.is-circle.jw-button-small {
+  &.is-circle.xh-button-small {
     border-radius: 100%;
     height: $h-small;
     width: $h-small;
   }
-  &.is-circle.jw-button-large {
+  &.is-circle.xh-button-large {
     border-radius: 100%;
     height: $h-large;
     width: $h-large;
   }
-  &.is-round.jw-button-default {
+  &.is-round.xh-button-default {
     border-radius: calc($h-default / 2);
   }
-  &.is-round.jw-button-large {
+  &.is-round.xh-button-large {
     border-radius: calc($h-large / 2);
   }
-  &.is-round.jw-button-small {
+  &.is-round.xh-button-small {
     border-radius: calc($h-small / 2);
   }
+  &.xh-type-text {
+    background-color: none;
+    border-color: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: $primary-color;
 
-  &.jw-theme-default {
     &:hover {
-      color: $green;
-      border-color: $green;
+      // background: lighten($primary-color, 20%);
+      // border-color: lighten($primary-color, 20%);
+      color: lighten($primary-color, 20%);
+    }
+    &:active {
+      // background-color: darken($primary-color, 20%);
+      // border-color: darken($primary-color, 20%);
+      color: lighten($primary-color, 20%);
+    }
 
-      > .jw-loadingIndicator {
+    &.is-disabled {
+      cursor: not-allowed;
+      // background: lighten($primary-color, 20%);
+      // border-color: lighten($primary-color, 20%);
+      color: lighten($primary-color, 20%);
+      &:hover {
+        // background: lighten($primary-color, 20%);
+        // border-color: lighten($primary-color, 20%);
+        color: lighten($primary-color, 20%);
+      }
+    }
+
+    &.is-dashed {
+      border-style: dashed;
+      background-color: $white !important;
+      color: $primary-color;
+
+      > .xh-loadingIndicator {
         border-style: dashed;
-        border-color: $green $green $green transparent;
+        border-color: $primary-color $primary-color $primary-color transparent;
+      }
+    }
+  }
+  &.xh-type-default {
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+
+      > .xh-loadingIndicator {
+        border-style: dashed;
+        border-color: $primary-color $primary-color $primary-color transparent;
       }
     }
     &:active {
-      color: darken($green, 20%);
-      border-color: darken($green, 20%);
+      color: darken($primary-color, 20%);
+      border-color: darken($primary-color, 20%);
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
-        border-color: darken($green, 20%) darken($green, 20%)
-          darken($green, 20%) transparent;
+        border-color: darken($primary-color, 20%) darken($primary-color, 20%)
+          darken($primary-color, 20%) transparent;
       }
     }
     &.is-dashed {
       border-style: dashed;
     }
-    > .jw-loadingIndicator {
+    > .xh-loadingIndicator {
       border-style: dashed;
       border-color: $default-color $default-color $default-color transparent;
     }
   }
-  &.jw-theme-primary {
+  &.xh-type-primary {
     background-color: $primary-color;
     border-color: $primary-color;
     color: $white;
@@ -195,14 +240,14 @@ $green: #18a058;
       background-color: $white !important;
       color: $primary-color;
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
         border-color: $primary-color $primary-color $primary-color transparent;
       }
     }
   }
 
-  &.jw-theme-info {
+  &.xh-type-info {
     background-color: $info-color;
     border-color: $info-color;
     color: $white;
@@ -230,14 +275,14 @@ $green: #18a058;
       background-color: $white !important;
       color: $info-color;
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
         border-color: $info-color $info-color $info-color transparent;
       }
     }
   }
 
-  &.jw-theme-success {
+  &.xh-type-success {
     background-color: $success-color;
     border-color: $success-color;
     color: $white;
@@ -265,14 +310,14 @@ $green: #18a058;
       background-color: $white !important;
       color: $success-color;
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
         border-color: $success-color $success-color $success-color transparent;
       }
     }
   }
 
-  &.jw-theme-warning {
+  &.xh-type-warning {
     background-color: $warning-color;
     border-color: $warning-color;
     color: $white;
@@ -300,14 +345,14 @@ $green: #18a058;
       background-color: $white !important;
       color: $warning-color;
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
         border-color: $warning-color $warning-color $warning-color transparent;
       }
     }
   }
 
-  &.jw-theme-error {
+  &.xh-type-error {
     background-color: $error-color;
     border-color: $error-color;
     color: $white;
@@ -335,24 +380,24 @@ $green: #18a058;
       background-color: $white !important;
       color: $error-color;
 
-      > .jw-loadingIndicator {
+      > .xh-loadingIndicator {
         border-style: dashed;
         border-color: $error-color $error-color $error-color transparent;
       }
     }
   }
 
-  &.jw-button-large {
+  &.xh-button-large {
     font-size: 24px;
     height: $h-large;
     padding: 0 16px;
   }
-  &.jw-button-small {
+  &.xh-button-small {
     font-size: 12px;
     height: $h-small;
     padding: 0 8px;
   }
-  > .jw-loadingIndicator {
+  > .xh-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -361,7 +406,7 @@ $green: #18a058;
     border-color: $white $white $white transparent;
     border-style: solid;
     border-width: 2px;
-    animation: jw-spin 1s infinite linear;
+    animation: xh-spin 1s infinite linear;
   }
   > .slot-icon-left {
     margin-right: 5px;
@@ -371,7 +416,7 @@ $green: #18a058;
   }
 }
 
-@keyframes jw-spin {
+@keyframes xh-spin {
   0% {
     transform: rotate(0deg);
   }

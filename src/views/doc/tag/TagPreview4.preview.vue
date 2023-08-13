@@ -1,7 +1,9 @@
-<preview>颜色</preview>
+<preview>自定义颜色</preview>
 <template>
-  <jw-tag
-    :color="{ color: '#BBB', backgroundColor: '#5555555', borderColor: '#555' }"
-    >告别夜晚 等待天亮
-  </jw-tag>
+  <xh-tag
+    color="#2082f0"
+    backgroundColor="rgba(32, 130, 240, 0.1)"
+    borderColor="#acd0f9"
+    >一段成熟的关系
+  </xh-tag>
 </template>

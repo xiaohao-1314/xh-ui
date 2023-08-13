@@ -1,16 +1,11 @@
 <preview>可关闭</preview>
 <template>
-  <jw-tag v-for="tag in tags" :key="tag.name" :type="tag.type" closeable>{{
-    tag.name
-  }}</jw-tag>
+  <xh-tag closeable>标签1</xh-tag>
+  <xh-tag type="primary" closeable>标签2</xh-tag>
+  <xh-tag type="info" closeable>标签3</xh-tag>
+  <xh-tag type="success" closeable>标签4</xh-tag>
+  <xh-tag type="warning" closeable>标签5</xh-tag>
+  <xh-tag type="error" closeable>标签6</xh-tag>
 </template>
-<script setup lang="ts">
-import { ref } from "vue";
-const tags = ref([
-  { name: "Tag 1", type: "" },
-  { name: "Tag 2", type: "success" },
-  { name: "Tag 3", type: "info" },
-  { name: "Tag 4", type: "warning" },
-  { name: "Tag 5", type: "error" },
-]);
-</script>
+<script setup lang="ts"></script>
+

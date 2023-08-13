@@ -19,8 +19,8 @@
           </main>
           <footer>
             <slot name="footer">
-              <jw-button @click="cancel">取消</jw-button>
-              <jw-button theme="primary" @click="confirm">确认</jw-button>
+              <xh-button @click="cancel">取消</xh-button>
+              <xh-button theme="primary" @click="confirm">确认</xh-button>
             </slot>
           </footer>
         </div>
@@ -133,7 +133,7 @@ $primary-color: #36ad6a;
       padding: 20px;
       text-align: right;
 
-      .jw-button + .jw-button {
+      .xh-button + .xh-button {
         margin-left: 12px;
       }
     }

@@ -1,4 +1,4 @@
-<preview>尺寸</preview>
+<preview>不同尺寸</preview>
 <template>
   <jw-radio v-model="radio" label="1" size="small">选项1</jw-radio>
   <jw-radio v-model="radio" label="2">选项2</jw-radio>

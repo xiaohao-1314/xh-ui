@@ -7,11 +7,11 @@
       <Preview :component="ButtonPreview2" />
       <Preview :component="ButtonPreview3" />
       <Preview :component="ButtonPreview4" />
-      <!-- <Preview :component="ButtonPreview5" /> -->
+      <Preview :component="ButtonPreview5" />
       <Preview :component="ButtonPreview6" />
-      <!-- <Preview :component="ButtonPreview6" /> -->
       <Doc title="属性" type="prop" :body="propDoc" />
       <Doc title="插槽" type="slot" :body="slotDoc" />
+      <Doc title="事件" type="event" :body="eventDoc" />
       <PrevAndNext
         :prev="{ path: '/doc/avatar', name: 'Avatar 头像' }"
         :next="{ path: '/doc/divider', name: '分割线 Divider' }"
@@ -28,20 +28,19 @@ import ButtonPreview1 from "./ButtonPreview1.preview.vue";
 import ButtonPreview2 from "./ButtonPreview2.preview.vue";
 import ButtonPreview3 from "./ButtonPreview3.preview.vue";
 import ButtonPreview4 from "./ButtonPreview4.preview.vue";
-import ButtonPreview5 from "./ButtonPreview5.preview.vue";
 import ButtonPreview6 from "./ButtonPreview6.preview.vue";
-import ButtonPreview7 from "./ButtonPreview7.preview.vue";
+import ButtonPreview5 from "./ButtonPreview5.preview.vue";
 
 const propDoc = [
   [
-    "theme",
+    "type",
     "类型",
     "string",
     "default / primary / info / success / warning / error",
     "default",
   ],
   ["dashed", "是否虚线为按钮", "boolean", "-", "false"],
-  ["size", "大小", "string", "small / default / large", "default"],
+  ["size", "按钮大小", "string", "small / default / large", "default"],
   ["round", "是否为圆角按钮", "boolean", "-", "false"],
   ["circle", "是否为圆形按钮", "boolean", "-", "false"],
   ["disabled", "是否禁用", "boolean", "-", "fasle"],
@@ -52,11 +51,12 @@ const slotDoc = [
   ["default", "自定义默认内容"],
   ["icon", "按钮的图标"],
 ];
+const eventDoc = [["click", "click 事件", "(): Event => {}"]];
 </script>
 
 <style lang="scss">
 .button-doc-wrapper {
-  .jw-button {
+  .xh-button {
     margin-right: 8px;
     margin-top: 8px;
   }

@@ -17,34 +17,34 @@
       />
       <!-- prefix slot -->
       <span class="jw-input-prefix-icon">
-        <jw-icon
+        <xh-icon
           v-if="prefixIcon"
           class="prefix-icon"
           :size="18"
           color="#dcdfe6"
         >
           <component :is="prefixIcon" />
-        </jw-icon>
+        </xh-icon>
       </span>
       <!-- suffix slot -->
       <span class="jw-input-suffix-icon">
-        <jw-icon
+        <xh-icon
           v-if="suffixIcon"
           class="suffix-icon"
           :size="18"
           color="#dcdfe6"
         >
           <component :is="suffixIcon" />
-        </jw-icon>
+        </xh-icon>
         <!-- clearable -->
         <div
           class="close-icon"
           v-if="clearable && nativeInputValue.length > 0 && !disabled"
           @click="hanldeClear"
         >
-          <jw-icon :size="18">
+          <xh-icon :size="18">
             <CloseCircleOutline />
-          </jw-icon>
+          </xh-icon>
         </div>
 
         <!-- password -->
@@ -53,9 +53,9 @@
           v-if="showPassword && !disabled"
           @click="handlePasswordVisible"
         >
-          <jw-icon :size="18">
+          <xh-icon :size="18">
             <Eye />
-          </jw-icon>
+          </xh-icon>
         </div>
       </span>
     </template>
@@ -268,7 +268,7 @@ $active-color: #18a058;
     justify-content: center;
     align-items: center;
 
-    .jw-icon {
+    .xh-icon {
       color: #dcdfe6;
 
       &:hover {
@@ -277,7 +277,7 @@ $active-color: #18a058;
     }
   }
 
-  .suffix-icon .jw-icon:hover {
+  .suffix-icon .xh-icon:hover {
     color: #dcdfe6;
   }
 }

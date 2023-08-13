@@ -1,10 +1,9 @@
 <preview>加载</preview>
 <template>
-  <jw-button theme="default" loading>loading</jw-button>
-  <jw-button theme="primary" loading>loading</jw-button>
-  <jw-button theme="info" loading>loading</jw-button>
-  <jw-button theme="success" loading>loading</jw-button>
-  <jw-button theme="warning" loading>loading</jw-button>
-  <jw-button theme="error" loading>loading</jw-button>
-  <jw-button theme="primary">loaded</jw-button>
+  <xh-Button type="default" loading>loading</xh-Button>
+  <xh-Button type="primary" loading>loading</xh-Button>
+  <xh-Button type="info" loading>loading</xh-Button>
+  <xh-Button type="success" loading>loading</xh-Button>
+  <xh-Button type="warning" loading>loading</xh-Button>
+  <xh-Button type="error" loading>loading</xh-Button>
 </template>

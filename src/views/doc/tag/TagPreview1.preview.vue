@@ -1,8 +1,9 @@
 <preview>基础用法</preview>
 <template>
-  <jw-tag>爱在西元前</jw-tag>
-  <jw-tag type="success">听妈妈的话</jw-tag>
-  <jw-tag type="warning">玫瑰花的葬礼</jw-tag>
-  <jw-tag type="error">你算什么男人</jw-tag>
-  <jw-tag type="info">超人不会飞 </jw-tag>
+  <xh-tag>标签1</xh-tag>
+  <xh-tag type="primary">标签2</xh-tag>
+  <xh-tag type="info">标签3</xh-tag>
+  <xh-tag type="success">标签4</xh-tag>
+  <xh-tag type="warning">标签5</xh-tag>
+  <xh-tag type="error">标签6</xh-tag>
 </template>
