@@ -5,7 +5,7 @@ git init &&
 git add . &&
 git commit -m "update" &&
 git branch -M master &&
-git remote add origin git@gitee.com:xiaohao-1314/xh-ui-website.git &&
+git remote add origin git@gitee.com:xiaohao-1314/xh-ui.git &&
 git push -f -u origin master &&
 
 rm -rf dist &&
@@ -15,8 +15,8 @@ git init &&
 git add . &&
 git commit -m "update" &&
 git branch -M master &&
-git remote add origin git@github.com:xiaohao-1314/xh-ui-website.git &&
+git remote add origin git@github.com:xiaohao-1314/xh-ui.git &&
 git push -f -u origin master &&
 
 cd -
-echo https://xiaohao-1314.github.io/xh-ui-website/
+echo https://xiaohao-1314.github.io/xh-ui/
