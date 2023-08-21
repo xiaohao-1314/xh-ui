@@ -47,7 +47,7 @@ export const useRadio = (props, emits) => {
   const classes = computed(() => ({
     "is-checked": modelValue.value === label.value,
     "is-disabled": disabled.value,
-    [`jw-radio-${size.value}`]: size.value,
+    [`xh-radio-${size.value}`]: size.value,
     "is-bordered": border.value,
   }));
 

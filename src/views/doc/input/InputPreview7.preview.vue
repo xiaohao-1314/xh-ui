@@ -3,7 +3,7 @@
   <xh-button @click="handleFocus">Focus</xh-button>
   <xh-button @click="handleSelect">Select</xh-button>
   <xh-button @click="handleBlur">Blur</xh-button>
-  <jw-input placeholder="请输入内容" v-model="value" ref="inputInstRef" />
+  <xh-input placeholder="请输入内容" v-model="value" ref="inputInstRef" />
 </template>
 
 <script setup lang="ts">

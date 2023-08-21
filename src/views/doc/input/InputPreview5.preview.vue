@@ -1,6 +1,6 @@
 <preview>文本域</preview>
 <template>
-  <jw-input
+  <xh-input
     placeholder="请输入内容"
     v-model="value"
     type="textarea"

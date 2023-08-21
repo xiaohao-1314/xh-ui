@@ -64,11 +64,11 @@ export const useInput = (props, emits) => {
     "is-disabled": disabled.value,
     "is-clearable": clearable.value,
     "show-password": showPassword.value,
-    "jw-input": type.value !== "textarea",
+    "xh-input": type.value !== "textarea",
     "jw-textarea": type.value === "textarea",
-    "jw-input-suffix":
+    "xh-input-suffix":
       showPassword.value || clearable.value || props.suffixIcon,
-    "jw-input-prefix": props.prefixIcon,
+    "xh-input-prefix": props.prefixIcon,
   }));
 
   const nativeInputValue = computed(() =>

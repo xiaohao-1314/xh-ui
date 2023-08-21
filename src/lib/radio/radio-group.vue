@@ -1,5 +1,5 @@
 <template>
-  <div ref="radioGroupRef" class="jw-radio-group" role="radiogroup">
+  <div ref="radioGroupRef" class="xh-radio-group" role="radiogroup">
     <slot></slot>
   </div>
 </template>

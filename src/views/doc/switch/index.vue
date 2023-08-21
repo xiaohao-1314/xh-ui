@@ -31,7 +31,7 @@ const propDoc = [
 </script>
 
 <style lang="scss">
-.jw-switch {
+.xh-switch {
   margin-right: 8px;
 }
 </style>

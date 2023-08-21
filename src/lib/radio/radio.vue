@@ -1,7 +1,7 @@
 <template>
-  <div class="jw-radio" @click="handleChange" :class="classes">
-    <span class="jw-radio-input" :class="classes"></span>
-    <span class="jw-radio-label" :class="classes">
+  <div class="xh-radio" @click="handleChange" :class="classes">
+    <span class="xh-radio-input" :class="classes"></span>
+    <span class="xh-radio-label" :class="classes">
       <slot>{{ label }}</slot>
     </span>
   </div>
@@ -23,11 +23,11 @@ const handleChange = () => {
 </script>
 <script lang="ts">
 export default {
-  name: "JwRadio",
+  name: "xhRadio",
 };
 </script>
 <style lang="scss">
-$checked-color: #36ad6a;
+$checked-color: #4098fc;
 
 $large-size: 16px;
 $default-size: 14px;
@@ -41,7 +41,7 @@ $large-height: 40px;
 $default-height: 32px;
 $small-height: 24px;
 
-.jw-radio {
+.xh-radio {
   cursor: pointer;
   margin-right: 32px;
   display: inline-flex;
@@ -58,14 +58,14 @@ $small-height: 24px;
       border: 1px solid $checked-color;
     }
   }
-  &.jw-radio-small {
+  &.xh-radio-small {
     height: $small-height;
     &.is-bordered:not(.is-disabled) {
       padding: 0 10px;
     }
   }
 
-  &.jw-radio-large {
+  &.xh-radio-large {
     height: $large-height;
     &.is-bordered:not(.is-disabled) {
       padding: 0 18px;
@@ -77,7 +77,7 @@ $small-height: 24px;
     color: #c2c2c2;
   }
 
-  > .jw-radio-input {
+  > .xh-radio-input {
     width: $default-size;
     height: $default-size;
     display: inline-flex;
@@ -85,7 +85,7 @@ $small-height: 24px;
     border-radius: 100%;
     position: relative;
 
-    &.jw-radio-small {
+    &.xh-radio-small {
       height: $small-size;
       width: $small-size;
       &:before {
@@ -96,7 +96,7 @@ $small-height: 24px;
       }
     }
 
-    &.jw-radio-large {
+    &.xh-radio-large {
       height: $large-size;
       width: $large-size;
       &:before {
@@ -145,16 +145,16 @@ $small-height: 24px;
     }
   }
 
-  > .jw-radio-label {
+  > .xh-radio-label {
     padding-left: 8px;
     user-select: none;
     font-size: $default-size;
 
-    &.jw-radio-large {
+    &.xh-radio-large {
       font-size: $large-size;
     }
 
-    &.jw-radio-small {
+    &.xh-radio-small {
       font-size: $small-size;
     }
   }

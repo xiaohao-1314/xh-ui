@@ -2,8 +2,8 @@
 基础用法
 </preview>
 <template>
-  <jw-switch v-model="checked" />
-  <jw-switch v-model="checked" disabled />
+  <xh-switch v-model="checked" />
+  <xh-switch v-model="checked" disabled />
 </template>
 
 <script setup lang="ts">

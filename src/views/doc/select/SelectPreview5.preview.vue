@@ -1,6 +1,6 @@
 <preview>多选</preview>
 <template>
-  <jw-select
+  <xh-select
     id="select"
     style="width: 400px"
     :options="options"
@@ -16,59 +16,44 @@ import { ref } from "vue";
 const value = ref(["song0", "song3", "song4"]);
 const options = [
   {
-    label: "Everybody's Got Something to Hide Except Me and My Monkey",
-    value: "song0",
-    disabled: true,
+    label: "选项一",
+    value: "1",
   },
   {
-    label: "Drive My Car",
-    value: "song1",
+    label: "选项二",
+    value: "2",
   },
   {
-    label: "Norwegian Wood",
-    value: "song2",
+    label: "选项三",
+    value: "3",
   },
   {
-    label: "You Won't See",
-    value: "song3",
-    disabled: true,
+    label: "选项四",
+    value: "4",
   },
   {
-    label: "Nowhere Man",
-    value: "song4",
+    label: "选项五",
+    value: "5",
   },
   {
-    label: "Think For Yourself",
-    value: "song5",
+    label: "选项六",
+    value: "6",
   },
   {
-    label: "The Word",
-    value: "song6",
+    label: "选项七",
+    value: "7",
   },
   {
-    label: "Michelle",
-    value: "song7",
-    disabled: true,
+    label: "选项八",
+    value: "8",
   },
   {
-    label: "What goes on",
-    value: "song8",
+    label: "选项九",
+    value: "9",
   },
   {
-    label: "Girl",
-    value: "song9",
-  },
-  {
-    label: "I'm looking through you",
-    value: "song10",
-  },
-  {
-    label: "In My Life",
-    value: "song11",
-  },
-  {
-    label: "Wait",
-    value: "song12",
+    label: "选项十",
+    value: "10",
   },
 ];
 </script>

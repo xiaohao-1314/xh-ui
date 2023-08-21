@@ -9,7 +9,7 @@
   >
     {{ tag }}
   </xh-tag>
-  <jw-input
+  <xh-input
     v-if="inputVisible"
     :ref="(e) => (InputRef = e)"
     v-model="inputValue"

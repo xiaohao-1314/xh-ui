@@ -1,20 +1,20 @@
 <template>
   <div
-    class="jw-select"
+    class="xh-select"
     :tabindex="disabled ? '' : -1"
     ref="selectRef"
     :class="{
       'is-disabled': disabled,
     }"
   >
-    <div v-if="!multiple" class="jw-base-select" :tabindex="disabled ? '' : -1">
-      <div v-show="modelLabel" class="jw-select-label">{{ modelLabel }}</div>
-      <div v-show="!modelLabel" class="jw-select-placeholder">
+    <div v-if="!multiple" class="xh-base-select" :tabindex="disabled ? '' : -1">
+      <div v-show="modelLabel" class="xh-select-label">{{ modelLabel }}</div>
+      <div v-show="!modelLabel" class="xh-select-placeholder">
         {{ placeholder }}
       </div>
       <xh-icon
         :size="18"
-        class="jw-select-suffix"
+        class="xh-select-suffix"
         @mousemove="clearable ? (closeVisible = true) : ''"
         @mouseleave="clearable ? (closeVisible = false) : ''"
         color="rgba(194, 194, 194, 1)"
@@ -26,7 +26,7 @@
         <IosArrowDown v-else />
       </xh-icon>
     </div>
-    <div class="jw-base-select jw-select-tags" v-if="multiple">
+    <div class="xh-base-select xh-select-tags" v-if="multiple">
       <xh-tag
         closeable
         v-for="(item, index) in modelLabel"
@@ -34,13 +34,13 @@
         @close="handleClear(item)"
         >{{ item }}</xh-tag
       >
-      <div v-show="modelLabel.length === 0" class="jw-select-placeholder">
+      <div v-show="modelLabel.length === 0" class="xh-select-placeholder">
         {{ placeholder }}
       </div>
 
       <xh-icon
         :size="18"
-        class="jw-select-suffix"
+        class="xh-select-suffix"
         @mousemove="clearable ? (closeVisible = true) : ''"
         @mouseleave="clearable ? (closeVisible = false) : ''"
         color="rgba(194, 194, 194, 1)"
@@ -52,10 +52,10 @@
         <IosArrowDown v-else />
       </xh-icon>
     </div>
-    <div class="jw-select-dropdown">
+    <div class="xh-select-dropdown">
       <div class="no-options" v-show="options.length === 0">无选项</div>
       <span
-        class="jw-select-option"
+        class="xh-select-option"
         :class="{
           'is-active': multiple
             ? modelValue.includes(item.value)
@@ -70,7 +70,7 @@
         <xh-ellipsis>{{ item.label }}</xh-ellipsis>
         <xh-icon
           :size="18"
-          class="jw-select-option-suffix-icon"
+          class="xh-select-option-suffix-icon"
           v-if="multiple && modelValue.includes(item.value)"
         >
           <Check />
@@ -141,26 +141,26 @@ const handleClear = (e) => {
 
 <script lang="ts">
 export default {
-  name: "JwSelect",
+  name: "xhSelect",
 };
 </script>
 <style lang="scss">
-.jw-select {
+.xh-select {
   width: 100%;
   position: relative;
   cursor: pointer;
 
-  .jw-select-placeholder {
+  .xh-select-placeholder {
     color: rgba(194, 194, 194, 1);
   }
 
-  .jw-select-label,
-  .jw-select-placeholder {
+  .xh-select-label,
+  .xh-select-placeholder {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
-  .jw-base-select {
+  .xh-base-select {
     width: 100%;
     line-height: 34px;
     min-height: 34px;
@@ -184,11 +184,10 @@ export default {
     &:active,
     &:focus {
       outline: none;
-      border-color: #18a058;
-      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+      border-color: #4098fc;
     }
 
-    .jw-select-suffix {
+    .xh-select-suffix {
       position: absolute;
       right: 5px;
       top: 0;
@@ -199,7 +198,7 @@ export default {
     }
   }
 
-  .jw-select-dropdown {
+  .xh-select-dropdown {
     z-index: 10000;
     position: absolute;
     border-radius: 3px;
@@ -226,7 +225,7 @@ export default {
       justify-content: center;
     }
 
-    .jw-select-option {
+    .xh-select-option {
       z-index: 10000;
       display: inline-block;
       cursor: pointer;
@@ -242,7 +241,7 @@ export default {
       background-color: #fff;
       position: relative;
 
-      .jw-select-option-suffix-icon {
+      .xh-select-option-suffix-icon {
         position: absolute;
         height: 100%;
         display: flex;
@@ -255,7 +254,7 @@ export default {
       &:hover,
       &.is-active {
         background-color: #f3f3f5;
-        color: #25a561;
+        color: #4098fc;
       }
 
       &.is-disabled {
@@ -275,26 +274,25 @@ export default {
     }
   }
 
-  &:hover .jw-select-dropdown {
+  &:hover .xh-select-dropdown {
     pointer-events: auto;
   }
-  &:focus-within .jw-select-dropdown {
+  &:focus-within .xh-select-dropdown {
     opacity: 1;
     height: 300px;
     width: 100%;
     pointer-events: auto;
   }
 
-  &:focus-within .jw-base-select {
+  &:focus-within .xh-base-select {
     outline: none;
-    border-color: #18a058;
-    box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+    border-color: #4098fc;
   }
 
   &.is-disabled {
     cursor: not-allowed;
   }
-  &.is-disabled .jw-base-select {
+  &.is-disabled .xh-base-select {
     cursor: not-allowed;
     background-color: #fafafc;
     color: rgba(194, 194, 194, 1);

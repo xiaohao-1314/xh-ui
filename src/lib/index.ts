@@ -12,11 +12,11 @@ import xhColorPicker from "./color-picker/index.vue";
 
 import xhCheckbox from "./checkbox/checkbox.vue";
 import xhCheckboxGroup from "./checkbox/checkbox-group.vue";
-import JwInput from "./input/index.vue";
-import JwRadio from "./radio/radio.vue";
+import xhInput from "./input/index.vue";
+import xhRadio from "./radio/radio.vue";
 import JwRadioGroup from "./radio/radio-group.vue";
-import JwSelect from "./select/index.vue";
-import JwSwitch from "./switch/index.vue";
+import xhSelect from "./select/index.vue";
+import xhSwitch from "./switch/index.vue";
 
 import JwAlert from "./alert/index.vue";
 import JwDialog from "./dialog/index.vue";
@@ -46,11 +46,11 @@ export {
   /* 数据录入组件 */
   xhCheckbox,
   xhCheckboxGroup,
-  JwInput,
-  JwRadio,
+  xhInput,
+  xhRadio,
   JwRadioGroup,
-  JwSelect,
-  JwSwitch,
+  xhSelect,
+  xhSwitch,
   /* 反馈组件 */
   JwAlert,
   JwDialog,
@@ -80,11 +80,11 @@ const components = [
 
   xhCheckbox,
   xhCheckboxGroup,
-  JwInput,
-  JwRadio,
+  xhInput,
+  xhRadio,
   JwRadioGroup,
-  JwSelect,
-  JwSwitch,
+  xhSelect,
+  xhSwitch,
 
   JwAlert,
   JwDialog,

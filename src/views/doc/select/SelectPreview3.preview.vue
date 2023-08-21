@@ -1,6 +1,6 @@
 <preview>禁用状态</preview>
 <template>
-  <jw-select
+  <xh-select
     id="select"
     style="width: 200px"
     :options="options"
@@ -14,47 +14,43 @@ import { ref } from "vue";
 const value = ref("1");
 const options = [
   {
-    label: "时间会回答成长",
+    label: "选项一",
     value: "1",
-    disabled: true,
   },
   {
-    label: "成长会回答梦想",
+    label: "选项二",
     value: "2",
   },
   {
-    label: "梦想会回答生活",
+    label: "选项三",
     value: "3",
-    disabled: true,
   },
   {
-    label: "生活回答你我的模样",
+    label: "选项四",
     value: "4",
   },
   {
-    label: "海洋会回答江湖",
+    label: "选项五",
     value: "5",
-    disabled: true,
   },
   {
-    label: "江湖会回答河流",
+    label: "选项六",
     value: "6",
   },
   {
-    label: "河流会回答浪潮",
+    label: "选项七",
     value: "7",
-    disabled: true,
   },
   {
-    label: "一起跃入人海",
+    label: "选项八",
     value: "8",
   },
   {
-    label: "做一朵奔涌的浪花",
+    label: "选项九",
     value: "9",
   },
   {
-    label: "。。。",
+    label: "选项十",
     value: "10",
   },
 ];

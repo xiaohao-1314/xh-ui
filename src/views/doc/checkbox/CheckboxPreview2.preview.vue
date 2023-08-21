@@ -8,7 +8,7 @@
       size="large"
       :disabled="disabled"
     />
-    <jw-switch v-model="disabled" />
+    <xh-switch v-model="disabled" />
   </div>
 </template>
 

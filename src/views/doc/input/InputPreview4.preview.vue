@@ -1,6 +1,6 @@
 <preview>密码框</preview>
 <template>
-  <jw-input placeholder="请输入内容" v-model="value" show-password />
+  <xh-input placeholder="请输入内容" v-model="value" show-password />
 </template>
 
 <script setup lang="ts">

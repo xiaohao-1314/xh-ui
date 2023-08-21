@@ -6,7 +6,7 @@
         ref="input"
         :disabled="disabled"
         :type="type"
-        class="jw-input-inner"
+        class="xh-input-inner"
         autocomplete="off"
         :readonly="readonly"
         :value="nativeInputValue"
@@ -16,7 +16,7 @@
         :placeholder="placeholder"
       />
       <!-- prefix slot -->
-      <span class="jw-input-prefix-icon">
+      <span class="xh-input-prefix-icon">
         <xh-icon
           v-if="prefixIcon"
           class="prefix-icon"
@@ -27,7 +27,7 @@
         </xh-icon>
       </span>
       <!-- suffix slot -->
-      <span class="jw-input-suffix-icon">
+      <span class="xh-input-suffix-icon">
         <xh-icon
           v-if="suffixIcon"
           class="suffix-icon"
@@ -168,22 +168,22 @@ defineExpose({
 </script>
 <script lang="ts">
 export default {
-  name: "JwInput",
+  name: "xhInput",
 };
 </script>
 
 <style lang="scss">
-$active-color: #18a058;
-.jw-input {
+$active-color: #4098fc;
+.xh-input {
   width: 100%;
   cursor: pointer;
   position: relative;
 
-  &.jw-input-prefix .jw-input-inner {
+  &.xh-input-prefix .xh-input-inner {
     padding-left: 30px;
   }
 
-  &.jw-input-suffix .jw-input-inner {
+  &.xh-input-suffix .xh-input-inner {
     padding-right: 30px;
   }
 
@@ -213,7 +213,7 @@ $active-color: #18a058;
     &:focus {
       outline: none;
       border-color: $active-color;
-      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+      // box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
     }
 
     &::placeholder {
@@ -223,7 +223,7 @@ $active-color: #18a058;
   }
 
   &.is-disabled {
-    .jw-input-inner {
+    .xh-input-inner {
       cursor: not-allowed;
       background-color: #fafafc;
       color: rgba(194, 194, 194, 1);
@@ -237,8 +237,8 @@ $active-color: #18a058;
     }
   }
 
-  .jw-input-suffix-icon,
-  .jw-input-prefix-icon {
+  .xh-input-suffix-icon,
+  .xh-input-prefix-icon {
     position: absolute;
     bottom: 0;
     height: 100%;
@@ -246,10 +246,10 @@ $active-color: #18a058;
     justify-content: center;
     align-items: center;
   }
-  .jw-input-suffix-icon {
+  .xh-input-suffix-icon {
     right: 5px;
   }
-  .jw-input-prefix-icon {
+  .xh-input-prefix-icon {
     left: 5px;
   }
 
@@ -306,7 +306,7 @@ $active-color: #18a058;
     &:focus {
       outline: none;
       border-color: $active-color;
-      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+      // box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
     }
 
     &::placeholder {

@@ -66,7 +66,7 @@ const methodsDoc = [
 
 <style lang="scss">
 .input-doc-wrapper {
-  .jw-input {
+  .xh-input {
     margin-right: 8px;
     margin-bottom: 8px;
   }

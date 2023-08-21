@@ -1,6 +1,6 @@
 <template>
   <button
-    class="jw-switch"
+    class="xh-switch"
     :class="classes"
     @click="toggle"
     :style="{ background: modelValue ? activeColor : inactiveColor }"
@@ -19,7 +19,7 @@ const props = defineProps({
   },
   activeColor: {
     type: String,
-    default: "#18a058",
+    default: "#4098fc",
   },
   inactiveColor: {
     type: String,
@@ -47,15 +47,15 @@ const { modelValue, disabled, size } = toRefs(props);
 
 const classes = computed(() => {
   return {
-    [`jw-switch-checked`]: modelValue.value,
-    [`jw-switch-disabled`]: disabled.value,
-    [`jw-switch-${size.value}`]: size.value,
+    [`xh-switch-checked`]: modelValue.value,
+    [`xh-switch-disabled`]: disabled.value,
+    [`xh-switch-${size.value}`]: size.value,
   };
 });
 </script>
 <script lang="ts">
 export default {
-  name: "JwSwitch",
+  name: "xhSwitch",
 };
 </script>
 
@@ -70,8 +70,8 @@ $large-h: 30px;
 $large-h-2: $large-h - 4px;
 
 $inactive-color: #dbdbdb;
-$active-color: #18a058;
-.jw-switch {
+$active-color: #4098fc;
+.xh-switch {
   height: $default-h;
   width: $default-h * 2;
   border: none;
@@ -103,16 +103,16 @@ $active-color: #18a058;
     transition: all 250ms;
   }
 
-  &.jw-switch-checked {
+  &.xh-switch-checked {
     background: $active-color;
     > span {
       left: calc(100% - $default-h-2 - 2px);
     }
-    &.jw-switch-small > span {
+    &.xh-switch-small > span {
       left: calc(100% - $small-h-2 - 2px);
     }
 
-    &.jw-switch-large > span {
+    &.xh-switch-large > span {
       left: calc(100% - $large-h-2 - 2px);
     }
   }
@@ -122,31 +122,31 @@ $active-color: #18a058;
       width: $default-h-2 + 4px;
     }
 
-    &.jw-switch-small > span {
+    &.xh-switch-small > span {
       width: $small-h-2 + 4px;
     }
 
-    &.jw-switch-large > span {
+    &.xh-switch-large > span {
       width: $large-h-2 + 4px;
     }
   }
-  &.jw-switch-checked:active {
+  &.xh-switch-checked:active {
     > span {
       width: $default-h-2 + 4px;
       margin-left: -4px;
     }
-    &.jw-switch-small > span {
+    &.xh-switch-small > span {
       width: $small-h-2 + 4px;
       margin-left: -4px;
     }
 
-    &.jw-switch-large > span {
+    &.xh-switch-large > span {
       width: $large-h-2 + 4px;
       margin-left: -4px;
     }
   }
 
-  &.jw-switch-small {
+  &.xh-switch-small {
     height: $small-h;
     width: $small-h * 2;
     border-radius: calc($small-h-2 / 1.5);
@@ -163,7 +163,7 @@ $active-color: #18a058;
     }
   }
 
-  &.jw-switch-large {
+  &.xh-switch-large {
     height: $large-h;
     width: $large-h * 2;
     border-radius: calc($large-h-2 / 1.5);

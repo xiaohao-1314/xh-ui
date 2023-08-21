@@ -1,13 +1,13 @@
 <preview>带 icon 的输入框</preview>
 <template>
-  <jw-input
+  <xh-input
     placeholder="请输入内容"
     v-model="value"
     :suffixIcon="Search28Filled"
     show-password
     clearable
   />
-  <jw-input
+  <xh-input
     placeholder="请输入内容"
     v-model="value1"
     :prefixIcon="Search28Filled"

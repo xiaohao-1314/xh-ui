@@ -2,9 +2,9 @@
 不同尺寸
 </preview>
 <template>
-  <jw-switch v-model="checked" size="small" />
-  <jw-switch v-model="checked" size="default" />
-  <jw-switch v-model="checked" size="large" />
+  <xh-switch v-model="checked" size="small" />
+  <xh-switch v-model="checked" size="default" />
+  <xh-switch v-model="checked" size="large" />
 </template>
 
 <script setup lang="ts">

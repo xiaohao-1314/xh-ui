@@ -1,7 +1,7 @@
 <preview>禁用状态</preview>
 <template>
-  <jw-radio v-model="radio" label="1" disabled>选项1</jw-radio>
-  <jw-radio v-model="radio" label="2" disabled>选项2</jw-radio>
+  <xh-radio v-model="radio" label="1" disabled>选项1</xh-radio>
+  <xh-radio v-model="radio" label="2" disabled>选项2</xh-radio>
 </template>
 
 <script setup lang="ts">

@@ -84,7 +84,6 @@ import { colorPickerProps, useColor } from "./index";
 
 const props = defineProps(colorPickerProps);
 const emits = defineEmits(["change"]);
-const arr = ref(["#f00", "#ff0", "#0f0", "#0ff", "#00f"]);
 const {
   changeColor,
   style1,
