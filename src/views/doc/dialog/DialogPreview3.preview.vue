@@ -1,20 +1,21 @@
 <preview>
-一句话打开Dialog
+文字用法
 </preview>
 <template>
-  <!-- <xh-button theme="primary" @click="toggle">点击打开对话框</xh-button> -->
+  <span @click="toggle">点击打开对话框</span>
+  <xh-dialog v-model="visible" />
 </template>
 
 <script setup lang="ts">
-// import { openDialog } from "yjw-ui";
-// const toggle = () => {
-//   openDialog({
-//     overlay: true,
-//     overlayClosable: true,
-//     title: () => "我是标题",
-//     content: () => "我是内容",
-//     confirm: () => {},
-//     cancel: () => {},
-//   });
-// };
+import { ref } from "vue";
+
+const visible = ref(false);
+
+const toggle = () => {
+  visible.value = !visible.value;
+};
+
+const confirm = () => {};
+
+const cancel = () => {};
 </script>

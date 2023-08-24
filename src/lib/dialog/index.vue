@@ -2,15 +2,15 @@
   <template v-if="modelValue">
     <Teleport to="body">
       <div
-        class="jw-dialog-overlay"
+        class="xh-dialog-overlay"
         v-if="overlay"
         @click="onOverlayClick"
       ></div>
-      <div class="jw-dialog">
-        <div class="jw-dialog-wrapper">
+      <div class="xh-dialog">
+        <div class="xh-dialog-wrapper">
           <header>
             <slot name="title">{{ title }}</slot>
-            <span class="jw-dialog-close" @click="close"></span>
+            <span class="xh-dialog-close" @click="close"></span>
           </header>
           <main>
             <slot>
@@ -84,7 +84,7 @@ const cancel = () => {
 </script>
 <script lang="ts">
 export default {
-  name: "JwDialog",
+  name: "xhDialog",
 };
 </script>
 
@@ -93,7 +93,7 @@ $radius: 3px;
 $border-color: #d9d9d9;
 $primary-color: #36ad6a;
 
-.jw-dialog {
+.xh-dialog {
   box-sizing: border-box;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

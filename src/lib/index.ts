@@ -18,10 +18,10 @@ import JwRadioGroup from "./radio/radio-group.vue";
 import xhSelect from "./select/index.vue";
 import xhSwitch from "./switch/index.vue";
 
-import JwAlert from "./alert/index.vue";
-import JwDialog from "./dialog/index.vue";
-import JwDrawer from "./drawer/drawer.vue";
-import JwMessage from "./message/index.ts";
+import xhAlert from "./alert/index.vue";
+import xhDialog from "./dialog/index.vue";
+import xhDrawer from "./drawer/drawer.vue";
+import xhMessage from "./message/index.ts";
 import { openDialog } from "./dialog/openDialog";
 
 import JwAffix from "./affix/index.vue";
@@ -52,10 +52,10 @@ export {
   xhSelect,
   xhSwitch,
   /* 反馈组件 */
-  JwAlert,
-  JwDialog,
-  JwDrawer,
-  JwMessage,
+  xhAlert,
+  xhDialog,
+  xhDrawer,
+  xhMessage,
   openDialog,
   /* 导航组件 */
   JwAffix,
@@ -86,9 +86,9 @@ const components = [
   xhSelect,
   xhSwitch,
 
-  JwAlert,
-  JwDialog,
-  JwDrawer,
+  xhAlert,
+  xhDialog,
+  xhDrawer,
 
   JwAffix,
   JwBacktop,

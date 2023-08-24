@@ -1,6 +1,6 @@
 <preview>自定义描述文案</preview>
 <template>
-  <jw-alert
+  <xh-alert
     title="Success 类型"
     type="success"
     show-icon

@@ -6,14 +6,14 @@
 
 <script setup lang="ts">
 import { h } from "vue";
-import JwMessage from "@/lib/message/index.ts";
+import xhMessage from "@/lib/message/index.ts";
 
 const open = () => {
-  JwMessage("This is a Message");
+  xhMessage("This is a Message");
 };
 
 const openVn = () => {
-  JwMessage({
+  xhMessage({
     message: h("p", null, [
       h("span", null, "Message can be "),
       h("i", { style: "color: teal" }, "VNode"),

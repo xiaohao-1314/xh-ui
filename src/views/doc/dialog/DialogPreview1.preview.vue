@@ -3,7 +3,7 @@
 </preview>
 <template>
   <xh-button theme="primary" @click="toggle">点击打开对话框</xh-button>
-  <jw-dialog v-model="visible" />
+  <xh-dialog v-model="visible" />
 </template>
 
 <script setup lang="ts">

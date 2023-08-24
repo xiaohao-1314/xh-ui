@@ -1,3 +1,3 @@
-import JwMessage from "./src/message-method";
+import xhMessage from "./src/message-method";
 
-export default JwMessage;
+export default xhMessage;

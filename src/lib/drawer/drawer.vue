@@ -1,11 +1,11 @@
 <template>
-  <div class="jw-drawer">drawer</div>
+  <div class="xh-drawer">还没完善</div>
 </template>
 
 <script setup lang="ts"></script>
 <script lang="ts">
 export default {
-  name: "JwDrawer",
+  name: "xhDrawer",
 };
 </script>
 

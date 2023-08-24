@@ -7,24 +7,24 @@
 </template>
 
 <script setup lang="ts">
-import JwMessage from "@/lib/message/index.ts";
+import xhMessage from "@/lib/message/index.ts";
 
 const open1 = () => {
-  JwMessage("this is a message.");
+  xhMessage("this is a message.");
 };
 const open2 = () => {
-  JwMessage({
+  xhMessage({
     message: "Congrats, this is a success message.",
     type: "success",
   });
 };
 const open3 = () => {
-  JwMessage({
+  xhMessage({
     message: "Warning, this is a warning message.",
     type: "warning",
   });
 };
 const open4 = () => {
-  JwMessage.error("Oops, this is a error message.");
+  xhMessage.error("Oops, this is a error message.");
 };
 </script>

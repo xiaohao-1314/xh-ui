@@ -37,7 +37,7 @@ const message = function (options = {}) {
   // should fallback to default value with a warning
   if (!(appendTo instanceof HTMLElement)) {
     throw new Error(
-      "JwMessage the appendTo option is not an HTMLElement. Falling back to document.body."
+      "xhMessage the appendTo option is not an HTMLElement. Falling back to document.body."
     );
     appendTo = document.body;
   }

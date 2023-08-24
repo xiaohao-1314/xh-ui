@@ -3,13 +3,13 @@
 </preview>
 <template>
   <xh-button theme="primary" @click="toggle">点击打开对话框</xh-button>
-  <jw-dialog
+  <xh-dialog
     v-model="visible"
-    :overlay-closable="false"
+    :overlay-closable="true"
     @onOverlayClick="onOverlayClick"
   >
-    我觉得用户应该聪明到点遮罩没用的时候就去点确认了。
-  </jw-dialog>
+    点遮罩的关闭对话框。
+  </xh-dialog>
 </template>
 
 <script setup lang="ts">

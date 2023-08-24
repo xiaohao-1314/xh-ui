@@ -53,7 +53,7 @@ const slotDoc = [
 
 <style lang="scss">
 .alert-doc-wrapper {
-  .jw-alert {
+  .xh-alert {
     margin-bottom: 12px;
   }
 }
